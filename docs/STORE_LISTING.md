@@ -7,7 +7,7 @@
 - **Fichier** : `~/garmin-store/dist/voxwrist-notes-2.1.0-free.iq` (version 2.1.0, UUID `51249208-8649-42a0-9b00-abebbbedab19`, mise à jour de la 2.0)
 - **Icône** : `assets/icon-notes-500.png`
 - **Captures** : `store-screenshots/notes21-*.png` (416×416 fēnix 8, 390×390 Venu 4, 454×454 FR570)
-- **Confidentialité** : URL publique de `privacy.html`
+- **Confidentialité** : https://imbertjules.github.io/voxwrist/privacy.html (site : https://imbertjules.github.io/voxwrist/)
 - **Mots-clés** : voice notes, dictation, transcription, email, notion, todoist, memo, dictée, note vocale, e-mail
 
 ### Description FR

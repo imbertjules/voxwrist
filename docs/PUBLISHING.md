@@ -26,7 +26,7 @@ Sans cette étape, Notes affiche « e-mail pas encore actif » quand la destinat
 6. Vérifie : `https://jular.tail4e27eb.ts.net:10000/v1/health` doit afficher `"email":true`.
 
 ## 1. Page de confidentialité (une seule fois)
-Pousse `~/garmin-store/voxwrist-site` sur un dépôt GitHub public › Settings › Pages › branche `main` → `https://<ton-user>.github.io/voxwrist-site/privacy.html` (elle couvre les deux apps).
+**Fait** : dépôt public https://github.com/imbertjules/voxwrist (GitHub Pages, branche `main`) → URL de confidentialité **https://imbertjules.github.io/voxwrist/privacy.html** (elle couvre les deux apps).
 
 ## 2. Tester sur ta fēnix 8 avant d'envoyer
 - Brancher la montre en USB puis `~/garmin-store/voxwrist-notes/tools/install-watch.sh` (sideload ; une app sideloadée ne reçoit pas les réglages Garmin Connect, d'où la clé de test intégrée au build local).
