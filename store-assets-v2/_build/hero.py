@@ -9,7 +9,7 @@ def wordmark(img,x,y,size=46,mark=True):
     d=ImageDraw.Draw(img)
     if mark:
         R=size*0.48
-        orb=Image.open('/workspace/voxstore/src/dist/icon-ask-500.png').convert('RGBA').resize((int(R*2+8),int(R*2+8)),Image.LANCZOS)
+        orb,_=orb_layer((int(R*2+8),int(R*2+8)),R,R+4,R+4,pal='aurore',accent='lagon',ss=3,swirl=1.3)
         # small glow
         gl=Image.new('RGBA',(int(R*6),int(R*6)),(0,0,0,0)); gd=ImageDraw.Draw(gl)
         gd.ellipse((R*1.5,R*1.5,R*4.5,R*4.5),fill=(140,90,255,110)); gl=gl.filter(ImageFilter.GaussianBlur(R*0.7))
