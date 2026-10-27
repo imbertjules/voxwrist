@@ -1,22 +1,32 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Voxwrist Notes — Confidentialité / Privacy</title><link rel="stylesheet" href="style.css"></head><body><main>
-<h1>Confidentialité</h1><p class="dim">Voxwrist Notes · version 2.0 · 27 octobre 2026</p>
-<h2>Ce qui circule</h2>
+<title>Voxwrist — Confidentialité / Privacy</title><link rel="stylesheet" href="style.css"></head><body><main>
+<h1>Confidentialité</h1><p class="dim">Voxwrist Notes 2.1 et Voxwrist Ask 2.0 · 27 octobre 2026</p>
+<h2>Principes</h2>
+<p>Vous apportez vos propres clés d'IA. Le relais Voxwrist ne fait que transmettre : il n'écrit sur disque ni l'audio, ni les textes, ni vos clés, ni vos identifiants, et ne tient aucun journal d'accès. Pas de compte, pas de publicité, pas de traceur, pas d'analyse, pas de revente.</p>
+<h2>Voxwrist Notes</h2>
 <ul>
-<li><strong>Audio</strong> : enregistré sur la montre seulement quand vous appuyez sur START, envoyé via votre téléphone (Garmin Connect) au relais Voxwrist en HTTPS, transmis à OpenAI pour la transcription, puis effacé de la mémoire du relais. Il n'est jamais écrit sur disque.</li>
-<li><strong>Clé OpenAI</strong> : saisie dans les réglages de l'appli (Garmin Connect), stockée par Garmin dans les réglages de l'appli sur votre montre, envoyée à chaque note au relais qui l'utilise uniquement pour appeler OpenAI pour vous. Elle n'est ni conservée ni journalisée.</li>
-<li><strong>Texte transcrit</strong> : renvoyé à la montre et, si vous les avez configurées, aux destinations que vous avez choisies (ntfy, Todoist, webhook). Le relais le garde en mémoire au plus 10 minutes, le temps que la montre le récupère.</li>
-<li><strong>Identifiant de la montre</strong> : utilisé uniquement pour limiter les abus (nombre de notes par heure et par jour). Le relais n'en garde qu'une empreinte (SHA-256) en mémoire.</li>
+<li><strong>Audio</strong> : enregistré seulement quand vous appuyez sur START, envoyé via votre téléphone (Garmin Connect) au relais en HTTPS, transmis à OpenAI pour la transcription avec votre clé, puis effacé de la mémoire.</li>
+<li><strong>Texte</strong> : renvoyé à la montre et envoyé à la destination choisie : votre <strong>adresse e-mail</strong> (via notre prestataire d'envoi Brevo), <strong>Notion</strong> ou <strong>Todoist</strong> avec votre jeton, ou le lien que vous avez indiqué. Il reste au plus 10 minutes en mémoire, le temps que la montre le récupère.</li>
+<li><strong>E-mail</strong> : envoyé uniquement à l'adresse saisie dans les réglages de votre montre, avec un plafond quotidien. Chaque message contient un lien de désinscription ; si vous l'utilisez, le relais garde seulement une empreinte (SHA-256) de l'adresse pour ne plus jamais y écrire.</li>
 </ul>
-<h2>Ce que nous ne faisons pas</h2>
-<p>Pas de compte, pas de publicité, pas de traceur, pas d'analyse, pas de revente. Aucun journal ne contient d'audio, de texte, de clé ni d'adresse IP de requête.</p>
-<h2>Hébergement et tiers</h2>
+<h2>Voxwrist Ask</h2>
 <ul>
-<li>Le relais est hébergé par l'éditeur sur un serveur personnel en France, exposé via Tailscale Funnel (l'adresse publique contient le nom d'hôte du serveur ; Tailscale achemine le trafic chiffré).</li>
-<li><strong>OpenAI</strong> reçoit l'audio et votre clé pour la transcription, selon ses propres conditions (<a href="https://openai.com/policies/privacy-policy">politique OpenAI</a>) ; les données envoyées par l'API ne servent pas à l'entraînement par défaut.</li>
-<li><strong>ntfy.sh</strong>, <strong>Todoist</strong> ou votre <strong>webhook</strong> reçoivent le texte uniquement si vous les avez configurés. Un sujet ntfy public peut être lu par quiconque le connaît : choisissez un nom long et aléatoire.</li>
+<li><strong>Question</strong> : l'audio est transcrit par OpenAI ; le texte est envoyé à l'IA choisie (OpenAI ou Anthropic) avec votre clé ; la réponse est transformée en voix par OpenAI et lue sur la montre.</li>
+<li><strong>Conversation</strong> : les 6 derniers échanges restent en mémoire au plus 10 minutes pour permettre les questions de suivi, puis sont effacés. La réponse vocale est gardée en mémoire au plus 10 minutes.</li>
+<li><strong>Brief du jour</strong> : la météo vient de la montre (Garmin) ou, si vous indiquez une ville, d'Open-Meteo. Si vous donnez un lien iCal privé, le relais lit votre agenda du jour à chaque actualisation, sans le conserver. Si vous configurez une boîte IMAP, le relais l'ouvre en lecture seule et lit seulement le nombre de messages non lus et l'expéditeur et le sujet des 3 derniers ; il ne lit pas le contenu et ne garde rien. Utilisez un mot de passe d'application révocable.</li>
+<li><strong>Rappels</strong> : stockés uniquement sur la montre.</li>
 </ul>
-<h2>Vos choix</h2><p>Supprimez la clé dans les réglages ou désinstallez l'appli pour tout arrêter. Les notes en attente sur la montre sont effacées à la désinstallation. Contact : voir la page de l'appli sur le Connect IQ Store.</p>
+<h2>Commun aux deux apps</h2>
+<ul>
+<li><strong>Clés et identifiants</strong> (OpenAI, Anthropic, Notion, Todoist, IMAP) : saisis dans Garmin Connect, stockés par Garmin dans les réglages de l'app sur votre montre, envoyés au relais à chaque requête et utilisés uniquement pour appeler le service concerné pour vous.</li>
+<li><strong>Identifiant de la montre</strong> : sert uniquement à limiter les abus (requêtes par heure/jour) et à vous réserver vos réponses ; seule une empreinte est gardée en mémoire.</li>
+<li><strong>Hébergement</strong> : le relais est hébergé par l'éditeur sur un serveur personnel en France, exposé via Tailscale Funnel.</li>
+<li><strong>Tiers</strong>, selon leurs conditions et seulement si vous les utilisez : OpenAI, Anthropic, Brevo (envoi des e-mails), Notion, Todoist, Open-Meteo, votre fournisseur d'agenda ou d'e-mail.</li>
+</ul>
+<h2>Vos choix</h2><p>Effacez les clés dans les réglages ou désinstallez l'app pour tout arrêter ; les notes en attente et les rappels sont effacés à la désinstallation. Contact : voir la page de l'app sur le Connect IQ Store.</p>
 <hr><h1>Privacy (English)</h1>
-<p>Audio is recorded only when you press START, sent over HTTPS through Garmin Connect to the Voxwrist relay, forwarded to OpenAI for transcription with <strong>your own API key</strong>, then dropped from memory (never written to disk). Your key is used only for that call and is never stored or logged. The transcript goes back to the watch and to the destinations you configured (ntfy, Todoist, webhook); the relay keeps it in memory for at most 10 minutes. A hashed watch identifier is used only for rate limiting. No accounts, ads, trackers or analytics. The relay runs on the publisher's personal server in France, exposed through Tailscale Funnel. OpenAI, ntfy, Todoist and your webhook process data under their own terms.</p>
+<p>You bring your own AI keys. The Voxwrist relay only forwards: it never writes audio, texts, keys or credentials to disk and keeps no access logs. No accounts, ads, trackers or analytics.</p>
+<p><strong>Notes</strong>: audio recorded only when you press START, transcribed by OpenAI with your key, then dropped. The text goes back to the watch and to your chosen destination: your <strong>email address</strong> (sent through our email provider Brevo, only to the address set on your watch, daily cap, unsubscribe link in every message; on unsubscribe we keep only a SHA-256 hash of the address), <strong>Notion</strong> or <strong>Todoist</strong> with your token, or your own link. Kept in memory for at most 10 minutes.</p>
+<p><strong>Ask</strong>: your question is transcribed by OpenAI, answered by the AI you chose (OpenAI or Anthropic) and voiced by OpenAI. The last 6 turns stay in memory for at most 10 minutes for follow-ups. Daily brief: weather from the watch or Open-Meteo; your private iCal link is read on each refresh and not stored; an optional IMAP mailbox is opened read-only to count unread messages and read sender and subject of the latest 3, never bodies, nothing stored. Reminders are stored on the watch only.</p>
+<p>A hashed watch identifier is used only for rate limiting. The relay runs on the publisher's personal server in France, exposed through Tailscale Funnel. Third parties (OpenAI, Anthropic, Brevo, Notion, Todoist, Open-Meteo, your calendar/mail provider) process data under their own terms, only when you use them.</p>
 </main></body></html>
