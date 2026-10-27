@@ -33,6 +33,6 @@ for r in (0,0x55,0xAA,0xFF):
     for b in (0,0x55,0xAA,0xFF): pal+=[r,g,b]
 p=Image.new('P',(1,1)); p.putpalette(pal+[0]*(768-len(pal)))
 q=small.quantize(palette=p,dither=Image.Dither.NONE).convert('RGB')
-q.save(O+'voxwrist-ask-device-icon-128-64color.png',optimize=True)
+q.save('/workspace/voxstore/assets-v2/proposals/E-device-icon-128-64color.png',optimize=True)
 q.resize((384,384),Image.NEAREST).save('lc_prev.png')
 print(len(set(q.getdata())))
