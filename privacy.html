@@ -1,24 +1,22 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Voxwrist — Confidentialité / Privacy</title><link rel="stylesheet" href="style.css"></head><body><main>
-<p><a href="index.html">← Voxwrist</a></p>
-<h1>Politique de confidentialité</h1><p class="dim">Voxwrist Notes et Voxwrist Ask — version du 27 octobre 2026</p>
-<h2>En bref</h2>
-<ul><li>Nous (l'éditeur) ne recevons <strong>aucune</strong> donnée : pas de compte, pas de serveur central, pas de statistiques, pas de publicité.</li>
-<li>Votre voix part uniquement vers <strong>le relais Voxwrist que vous hébergez</strong> (adresse que vous saisissez dans les réglages).</li>
-<li>Le relais garde l'audio <strong>en mémoire vive uniquement</strong>, le supprime dès la transcription (au plus tard 15 minutes), ne l'écrit jamais sur disque et ne journalise ni l'audio ni le texte.</li></ul>
-<h2>Données traitées</h2>
-<p><strong>Sur la montre</strong> : vos réglages (adresse du relais, jeton, destinations), et pour Notes, les notes en attente d'envoi lorsque le téléphone est hors ligne (supprimées après envoi). Pour Ask, les 3 derniers échanges pour les questions de suivi.</p>
-<p><strong>Transit</strong> : la montre envoie l'audio par l'application Garmin Connect de votre téléphone, en HTTPS, à votre relais.</p>
-<p><strong>Services tiers que vous choisissez</strong> : si vous configurez un service externe (transcription, IA, synthèse vocale, e-mail, webhook comme OpenAI, Mistral, n8n, Todoist, Notion…), le texte ou l'audio lui est transmis selon sa propre politique de confidentialité. Par défaut, la transcription est locale (Whisper sur votre relais).</p>
-<p><strong>Garmin</strong> : la distribution, l'essai et le paiement passent par le Connect IQ Store, soumis à la politique de confidentialité de Garmin.</p>
-<h2>Vos droits</h2><p>Toutes les données sont sous votre contrôle : désinstaller l'app efface les données de la montre ; arrêter votre relais arrête tout traitement. Contact : <span class="dim">[adresse e-mail de contact à compléter]</span>.</p>
-<hr>
-<h1 lang="en">Privacy policy</h1><p class="dim">Voxwrist Notes and Voxwrist Ask — October 27, 2026</p>
-<ul lang="en"><li>We (the publisher) receive <strong>no</strong> data: no account, no central server, no analytics, no ads.</li>
-<li>Your voice is sent only to <strong>the Voxwrist Relay you host</strong> (the address you enter in the settings), via the Garmin Connect phone app over HTTPS.</li>
-<li>The relay keeps audio <strong>in RAM only</strong>, deletes it right after transcription (15 minutes at most), never writes it to disk and never logs audio or text.</li>
-<li>On the watch: your settings, Notes waiting to be sent while offline (deleted once sent), and the last 3 Ask exchanges for follow-ups.</li>
-<li>Third-party services you configure (speech-to-text, AI, text-to-speech, e-mail, webhooks) receive the text or audio under their own privacy policies. By default, transcription runs locally on your relay.</li>
-<li>Store distribution, trials and payments are handled by Garmin's Connect IQ Store under Garmin's privacy policy.</li>
-<li>Contact: <span class="dim">[contact e-mail to fill in]</span>.</li></ul>
+<title>Voxwrist Notes — Confidentialité / Privacy</title><link rel="stylesheet" href="style.css"></head><body><main>
+<h1>Confidentialité</h1><p class="dim">Voxwrist Notes · version 2.0 · 27 octobre 2026</p>
+<h2>Ce qui circule</h2>
+<ul>
+<li><strong>Audio</strong> : enregistré sur la montre seulement quand vous appuyez sur START, envoyé via votre téléphone (Garmin Connect) au relais Voxwrist en HTTPS, transmis à OpenAI pour la transcription, puis effacé de la mémoire du relais. Il n'est jamais écrit sur disque.</li>
+<li><strong>Clé OpenAI</strong> : saisie dans les réglages de l'appli (Garmin Connect), stockée par Garmin dans les réglages de l'appli sur votre montre, envoyée à chaque note au relais qui l'utilise uniquement pour appeler OpenAI pour vous. Elle n'est ni conservée ni journalisée.</li>
+<li><strong>Texte transcrit</strong> : renvoyé à la montre et, si vous les avez configurées, aux destinations que vous avez choisies (ntfy, Todoist, webhook). Le relais le garde en mémoire au plus 10 minutes, le temps que la montre le récupère.</li>
+<li><strong>Identifiant de la montre</strong> : utilisé uniquement pour limiter les abus (nombre de notes par heure et par jour). Le relais n'en garde qu'une empreinte (SHA-256) en mémoire.</li>
+</ul>
+<h2>Ce que nous ne faisons pas</h2>
+<p>Pas de compte, pas de publicité, pas de traceur, pas d'analyse, pas de revente. Aucun journal ne contient d'audio, de texte, de clé ni d'adresse IP de requête.</p>
+<h2>Hébergement et tiers</h2>
+<ul>
+<li>Le relais est hébergé par l'éditeur sur un serveur personnel en France, exposé via Tailscale Funnel (l'adresse publique contient le nom d'hôte du serveur ; Tailscale achemine le trafic chiffré).</li>
+<li><strong>OpenAI</strong> reçoit l'audio et votre clé pour la transcription, selon ses propres conditions (<a href="https://openai.com/policies/privacy-policy">politique OpenAI</a>) ; les données envoyées par l'API ne servent pas à l'entraînement par défaut.</li>
+<li><strong>ntfy.sh</strong>, <strong>Todoist</strong> ou votre <strong>webhook</strong> reçoivent le texte uniquement si vous les avez configurés. Un sujet ntfy public peut être lu par quiconque le connaît : choisissez un nom long et aléatoire.</li>
+</ul>
+<h2>Vos choix</h2><p>Supprimez la clé dans les réglages ou désinstallez l'appli pour tout arrêter. Les notes en attente sur la montre sont effacées à la désinstallation. Contact : voir la page de l'appli sur le Connect IQ Store.</p>
+<hr><h1>Privacy (English)</h1>
+<p>Audio is recorded only when you press START, sent over HTTPS through Garmin Connect to the Voxwrist relay, forwarded to OpenAI for transcription with <strong>your own API key</strong>, then dropped from memory (never written to disk). Your key is used only for that call and is never stored or logged. The transcript goes back to the watch and to the destinations you configured (ntfy, Todoist, webhook); the relay keeps it in memory for at most 10 minutes. A hashed watch identifier is used only for rate limiting. No accounts, ads, trackers or analytics. The relay runs on the publisher's personal server in France, exposed through Tailscale Funnel. OpenAI, ntfy, Todoist and your webhook process data under their own terms.</p>
 </main></body></html>

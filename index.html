@@ -1,22 +1,23 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Voxwrist — la voix au poignet pour montres Garmin</title>
-<meta name="description" content="Voxwrist Notes et Voxwrist Ask : dictée et assistant IA vocal pour montres Garmin avec micro. Auto-hébergé, privé.">
+<title>Voxwrist Notes — dictée vocale gratuite pour montres Garmin</title>
+<meta name="description" content="Voxwrist Notes : START, parlez, START. Transcription OpenAI avec votre propre clé, envoyée vers ntfy, Todoist ou un webhook. Gratuit, sans stockage.">
 <link rel="stylesheet" href="style.css"></head><body><main>
 <a class="lang" href="#en">English ↓</a>
-<section class="hero"><img class="logo" src="assets/icon-notes-500.png" alt=""><img class="logo" src="assets/icon-ask-500.png" alt="">
-<h1>Voxwrist</h1><p class="dim">Votre voix, depuis votre montre Garmin. Deux appuis, sans clavier. Vos données restent chez vous.</p></section>
-<div class="cards">
-<div class="card notes"><h2>Voxwrist Notes</h2><p>START, parlez, START. La transcription arrive par e-mail ou webhook (n8n, Todoist, Notion…). Fonctionne hors connexion : la note part plus tard.</p><p class="dim">4,99 € · essai 14 jours</p></div>
-<div class="card ask"><h2>Voxwrist Ask</h2><p>Posez une question à <em>votre</em> IA (Ollama, OpenAI, Mistral…). Réponse à l'écran et à voix haute. Requêtes rapides en un appui.</p><p class="dim">5,99 € · essai 14 jours</p></div></div>
-<div class="shots"><img src="store-screenshots/notes-2-recording.png" alt="Enregistrement"><img src="store-screenshots/notes-3-sent.png" alt="Note envoyée"><img src="store-screenshots/ask-4-answer-fr.png" alt="Réponse"><img src="store-screenshots/ask-1-menu.png" alt="Menu Ask"></div>
-<h2>Installation en 3 étapes</h2><ol class="steps">
-<li>Lancez le relais (gratuit, open source) : <code>docker compose up -d</code> sur un PC, NAS, Raspberry Pi ou VPS.</li>
-<li>Rendez-le accessible en HTTPS : Cloudflare Tunnel ou Tailscale Funnel (gratuits), ou Caddy avec votre domaine.</li>
-<li>Dans Garmin Connect › Applis Connect IQ › Voxwrist › Paramètres : collez l'adresse du relais et le jeton. La montre passe alors à l’écran « START ».</li></ol>
-<p>Compatibilité : montres Garmin avec micro (Connect IQ 6.0.3+) : fēnix 8 / 8 Pro / fēnix E / 9, enduro 3 / 4, Forerunner 570 / 970 / 170 / 70, Venu 4 / X1, vívoactive 6, MARQ 3, D2 Mach 2, Approach S72. Haut-parleur requis pour la réponse parlée.</p>
-<p><a href="privacy.html">Politique de confidentialité</a> · Guide du relais : <span class="dim">[lien GitHub du relais]</span></p>
+<section class="hero"><img class="logo" src="assets/icon-notes-500.png" alt="">
+<h1>Voxwrist Notes</h1><p class="dim">Votre voix, depuis votre montre Garmin. Deux appuis, sans clavier. Gratuit.</p></section>
+<div class="shots"><img src="store-screenshots/notes-1-ready-fr.png" alt="Prêt"><img src="store-screenshots/notes-2-recording-fr.png" alt="Enregistrement"><img src="store-screenshots/notes-3-sent-fr.png" alt="Note envoyée"></div>
+<h2>Comment ça marche</h2><ol class="steps">
+<li>Appuyez sur START, parlez (jusqu'à 2 minutes), appuyez sur START.</li>
+<li>La note est transcrite par OpenAI avec <strong>votre propre clé API</strong> (vous payez OpenAI directement, quelques centimes par heure d'audio).</li>
+<li>Le texte s'affiche sur la montre et part, si vous le voulez, vers une notification téléphone (<a href="https://ntfy.sh">ntfy</a>), Todoist ou un webhook (Notion, Zapier, Make, n8n, e-mail via Zapier…).</li></ol>
+<h2>Installation</h2><ol class="steps">
+<li>Installez Voxwrist Notes depuis le Connect IQ Store.</li>
+<li>Créez une clé sur <a href="https://platform.openai.com/api-keys">platform.openai.com</a>.</li>
+<li>Appli Garmin Connect › votre montre › Applis Connect IQ › Voxwrist Notes › Réglages : collez la clé, et éventuellement un sujet ntfy, un jeton Todoist ou une URL de webhook. Rien à taper sur la montre, aucun serveur à installer.</li></ol>
+<p>Hors connexion, la note est gardée sur la montre (5 max) et part toute seule au retour du téléphone.</p>
+<p>Compatibilité : montres Garmin avec micro (Connect IQ 6.0.3+) : fēnix 8 / 8 Pro / 9, Forerunner 570 / 970, Venu 4 / X1, MARQ 3, D2 Mach 2, Approach S72.</p>
+<p><a href="privacy.html">Confidentialité</a> — ni l'audio, ni le texte, ni votre clé ne sont conservés.</p>
 <hr id="en"><h2>English</h2>
-<p><strong>Voxwrist Notes</strong>: press START, speak, press START — get the transcript by e-mail or webhook (n8n, Todoist, Notion…), even after being offline. <strong>Voxwrist Ask</strong>: ask <em>your</em> AI (Ollama, OpenAI, Mistral…) and read or hear the answer.</p>
-<p>Both apps talk only to a free, open-source <strong>Voxwrist Relay you host</strong> (Docker), reachable over HTTPS (Cloudflare Tunnel, Tailscale Funnel or Caddy). Audio is kept in memory only and deleted right after transcription. <a href="privacy.html">Privacy policy</a>.</p>
-<footer>Voxwrist n'est pas affilié à Garmin. Garmin, fēnix, Forerunner et Connect IQ sont des marques de Garmin Ltd.</footer>
+<p><strong>Voxwrist Notes</strong> is a free voice-notes app for Garmin watches with a microphone: press START, speak, press START. Audio is transcribed by OpenAI using <strong>your own API key</strong> (set once in the Garmin Connect app, never typed on the watch). The text is shown on the watch and can be sent to a phone notification (ntfy), Todoist or any https webhook (Notion, Zapier, Make, n8n — e-mail through Zapier/Make). No account, no server to install. Audio, text and keys are never stored. <a href="privacy.html">Privacy policy</a>.</p>
+<footer>Voxwrist n'est pas affilié à Garmin ni à OpenAI. Garmin, fēnix, Forerunner, Venu et Connect IQ sont des marques de Garmin Ltd.</footer>
 </main></body></html>
