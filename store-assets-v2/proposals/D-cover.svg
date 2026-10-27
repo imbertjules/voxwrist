@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500"><defs><linearGradient id="bgd" x1="0.1" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#FFC07A"/><stop offset="0.42" stop-color="#FF6F91"/><stop offset="1" stop-color="#6A2BE8"/></linearGradient></defs><rect width="500" height="500" fill="url(#bgd)"/><defs><radialGradient id="g5" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#3A0C6E" stop-opacity="0.55"/><stop offset="1" stop-color="#3A0C6E" stop-opacity="0"/></radialGradient></defs><circle cx="250" cy="262" r="230" fill="url(#g5)"/><circle cx="250" cy="248" r="191" fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="5"/><defs>
+<radialGradient id="dg" cx="40%" cy="34%" r="72%" fx="36%" fy="28%">
+ <stop offset="0" stop-color="#FFC9E4"/><stop offset="0.36" stop-color="#FF74B8"/><stop offset="0.82" stop-color="#5536E8"/><stop offset="1" stop-color="#2A1580"/></radialGradient>
+<radialGradient id="drim" cx="50%" cy="50%" r="50%" fx="30%" fy="25%">
+ <stop offset="0.80" stop-color="#B68DFF" stop-opacity="0"/><stop offset="0.97" stop-color="#B68DFF" stop-opacity="0.85"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.9"/></radialGradient>
+<radialGradient id="dspec" cx="50%" cy="50%" r="50%">
+ <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
+<radialGradient id="dsh" cx="50%" cy="50%" r="50%">
+ <stop offset="0" stop-color="#000000" stop-opacity="0.45"/><stop offset="1" stop-color="#000000" stop-opacity="0"/></radialGradient>
+<linearGradient id="deye" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#241A4A"/><stop offset="1" stop-color="#16112E"/></linearGradient>
+</defs>
+<ellipse cx="250" cy="429.29999999999995" rx="148.0" ry="29.6" fill="url(#dsh)"/>
+<circle cx="250" cy="248" r="185" fill="url(#dg)"/>
+<defs><radialGradient id="drl" cx="44%" cy="40%" r="62%">
+ <stop offset="0.78" stop-color="#B68DFF" stop-opacity="0"/><stop offset="0.93" stop-color="#B68DFF" stop-opacity="0.55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.75"/></radialGradient></defs>
+<circle cx="250" cy="248" r="185" fill="url(#drl)"/>
+<circle cx="250" cy="248" r="184.075" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="2.22"/>
+<ellipse cx="183.4" cy="151.8" rx="55.5" ry="27.75" transform="rotate(-28 183.4 151.8)" fill="url(#dspec)"/>
+<rect x="178.26530612244898" y="191.3673469387755" width="33.97959183673469" height="64.18367346938776" rx="16.989795918367346" fill="url(#deye)"/>
+<rect x="287.7551020408163" y="191.3673469387755" width="33.97959183673469" height="64.18367346938776" rx="16.989795918367346" fill="url(#deye)"/>
+<path d="M212.24489795918367 297.0816326530612 Q250.0 327.2857142857143 287.7551020408163 297.0816326530612" fill="none" stroke="#16112E" stroke-width="18.877551020408163" stroke-linecap="round"/></svg>
