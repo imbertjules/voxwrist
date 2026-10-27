@@ -52,12 +52,14 @@ Requires a Garmin watch with a microphone (Connect IQ 6.0.3+) paired with the Ga
 EN: Needs one of the user's own API keys: OpenAI, Groq (free) or Google Gemini (free) (Garmin Connect › app settings). Without a key the watch shows a setup screen. Default destination is Email: enter any address you own in "Your email address"; the note arrives from the Voxwrist sender with an unsubscribe link. Notion (integration token + page link) and Todoist (API token) are optional. Relay health: https://jular.tail4e27eb.ts.net:10000/v1/health
 
 ---------------------------------------------------------------------------------------------------
-## 2. Voxwrist Ask 2.0
+## 2. Voxwrist Ask 2.0.1
 
 - **Nom** : Voxwrist Ask · **Type** : Watch App · **Catégorie** : Outils / Productivité · **Prix** : gratuit
-- **Fichier** : `~/garmin-store/dist/voxwrist-ask-2.0.0-free.iq` (version 2.0.0, UUID `fd13665c-b9c3-4a38-a44d-6a8ffbf46dcf`, 23 montres avec micro)
-- **Icône** : `assets/icon-ask-500.png` (nouvel orbe)
-- **Captures** : `store-screenshots/ask-*.png`
+- **Fichier** : `~/garmin-store/voxwrist-ask/dist/voxwrist-ask-2.0.1.iq` (version 2.0.1, UUID `fd13665c-b9c3-4a38-a44d-6a8ffbf46dcf`, 26 appareils avec micro — export 26/26, 23 modèles du manifeste dont certains en plusieurs variantes ; mise à jour de la 2.0.0)
+- **Icône (couverture 500×500)** : `assets-v2/voxwrist-ask-cover-500.png`
+- **Hero (1440×720)** : FR `assets-v2/voxwrist-ask-hero-1440x720-fr.jpg` · EN `assets-v2/voxwrist-ask-hero-1440x720-en.jpg`
+- **Galerie FR (5 JPG)** : `assets-v2/voxwrist-ask-screenshot-1-ask-voice-fr.jpg`, `-2-daily-brief-fr.jpg`, `-3-voice-reminders-fr.jpg`, `-4-follow-up-fr.jpg`, `-5-live-orb-fr.jpg`
+- **Galerie EN (5 JPG)** : `assets-v2/voxwrist-ask-screenshot-1-ask-voice-en.jpg`, `-2-daily-brief-en.jpg`, `-3-voice-reminders-en.jpg`, `-4-follow-up-en.jpg`, `-5-live-orb-en.jpg`
 - **Mots-clés** : assistant, ai, chatgpt, claude, voice assistant, agent, reminders, daily brief, assistant vocal, rappels
 
 ### Description FR
@@ -71,6 +73,7 @@ Votre agent personnel, au poignet. Appuyez sur START, posez votre question, il v
 
 Apportez votre clé, gratuite ou payante : Google Gemini (gratuite, aistudio.google.com : réponses, et voix si disponible), Groq (gratuite, console.groq.com : réponses à l'écran) ou OpenAI (la meilleure voix, quelques centimes par jour). Anthropic Claude peut répondre, avec une clé Gemini, Groq ou OpenAI pour comprendre la voix. Sans clé OpenAI ni Gemini, la réponse s'affiche sans être lue.
 Connecteurs facultatifs (réglages) : ville pour la météo, lien iCal privé de votre agenda (Google Agenda, iCloud, Outlook), boîte e-mail IMAP en lecture seule avec mot de passe d'application.
+E-mail : fonctionne avec Gmail, iCloud, Yahoo, Orange et Free via un mot de passe d'application ; Outlook/Hotmail n'est pas pris en charge.
 Les rappels restent sur la montre. Ni l'audio, ni les textes, ni vos clés ne sont conservés par le relais Voxwrist. Pas de compte, pas de publicité.
 
 ### Description EN
@@ -84,6 +87,7 @@ Your personal agent, on your wrist. Press START, ask, and it answers out loud an
 
 Bring your own key, free or paid: Google Gemini (free, aistudio.google.com: answers, and voice when available), Groq (free, console.groq.com: on-screen answers) or OpenAI (best voice, a few cents a day). Anthropic Claude can answer, with a Gemini, Groq or OpenAI key to understand your voice. Without an OpenAI or Gemini key, answers are shown, not spoken.
 Optional connectors (settings): weather city, private iCal link of your calendar (Google Calendar, iCloud, Outlook), read-only IMAP mailbox with an app password.
+Mail: works with Gmail, iCloud, Yahoo, Orange and Free using an app password; Outlook/Hotmail is not supported.
 Reminders stay on the watch. Audio, texts and keys are never stored by the Voxwrist relay. No account, no ads.
 
 ### Notes pour le testeur (reviewer notes)
