@@ -1,0 +1,22 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voxwrist — la voix au poignet pour montres Garmin</title>
+<meta name="description" content="Voxwrist Notes et Voxwrist Ask : dictée et assistant IA vocal pour montres Garmin avec micro. Auto-hébergé, privé.">
+<link rel="stylesheet" href="style.css"></head><body><main>
+<a class="lang" href="#en">English ↓</a>
+<section class="hero"><img class="logo" src="assets/icon-notes-500.png" alt=""><img class="logo" src="assets/icon-ask-500.png" alt="">
+<h1>Voxwrist</h1><p class="dim">Votre voix, depuis votre montre Garmin. Deux appuis, sans clavier. Vos données restent chez vous.</p></section>
+<div class="cards">
+<div class="card notes"><h2>Voxwrist Notes</h2><p>START, parlez, START. La transcription arrive par e-mail ou webhook (n8n, Todoist, Notion…). Fonctionne hors connexion : la note part plus tard.</p><p class="dim">4,99 € · essai 14 jours</p></div>
+<div class="card ask"><h2>Voxwrist Ask</h2><p>Posez une question à <em>votre</em> IA (Ollama, OpenAI, Mistral…). Réponse à l'écran et à voix haute. Requêtes rapides en un appui.</p><p class="dim">5,99 € · essai 14 jours</p></div></div>
+<div class="shots"><img src="store-screenshots/notes-2-recording.png" alt="Enregistrement"><img src="store-screenshots/notes-3-sent.png" alt="Note envoyée"><img src="store-screenshots/ask-4-answer-fr.png" alt="Réponse"><img src="store-screenshots/ask-1-menu.png" alt="Menu Ask"></div>
+<h2>Installation en 3 étapes</h2><ol class="steps">
+<li>Lancez le relais (gratuit, open source) : <code>docker compose up -d</code> sur un PC, NAS, Raspberry Pi ou VPS.</li>
+<li>Rendez-le accessible en HTTPS : Cloudflare Tunnel ou Tailscale Funnel (gratuits), ou Caddy avec votre domaine.</li>
+<li>Dans Garmin Connect › Applis Connect IQ › Voxwrist › Paramètres : collez l'adresse du relais et le jeton. La montre passe alors à l’écran « START ».</li></ol>
+<p>Compatibilité : montres Garmin avec micro (Connect IQ 6.0.3+) : fēnix 8 / 8 Pro / fēnix E / 9, enduro 3 / 4, Forerunner 570 / 970 / 170 / 70, Venu 4 / X1, vívoactive 6, MARQ 3, D2 Mach 2, Approach S72. Haut-parleur requis pour la réponse parlée.</p>
+<p><a href="privacy.html">Politique de confidentialité</a> · Guide du relais : <span class="dim">[lien GitHub du relais]</span></p>
+<hr id="en"><h2>English</h2>
+<p><strong>Voxwrist Notes</strong>: press START, speak, press START — get the transcript by e-mail or webhook (n8n, Todoist, Notion…), even after being offline. <strong>Voxwrist Ask</strong>: ask <em>your</em> AI (Ollama, OpenAI, Mistral…) and read or hear the answer.</p>
+<p>Both apps talk only to a free, open-source <strong>Voxwrist Relay you host</strong> (Docker), reachable over HTTPS (Cloudflare Tunnel, Tailscale Funnel or Caddy). Audio is kept in memory only and deleted right after transcription. <a href="privacy.html">Privacy policy</a>.</p>
+<footer>Voxwrist n'est pas affilié à Garmin. Garmin, fēnix, Forerunner et Connect IQ sont des marques de Garmin Ltd.</footer>
+</main></body></html>
