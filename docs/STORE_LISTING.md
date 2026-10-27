@@ -13,7 +13,7 @@
 ### Description FR
 Dictez une note depuis votre poignet en deux appuis : START, parlez, START. Elle arrive dans votre boîte e-mail.
 
-Voxwrist Notes enregistre votre voix avec le micro de la montre, la fait transcrire par OpenAI avec VOTRE clé API, affiche le texte sur la montre et l'envoie où vous voulez :
+Voxwrist Notes enregistre votre voix avec le micro de la montre, la fait transcrire avec VOTRE clé API (OpenAI, ou une clé gratuite Groq ou Google Gemini), affiche le texte sur la montre et l'envoie où vous voulez :
 • E-mail (par défaut) : indiquez simplement votre adresse ;
 • Notion : une nouvelle page (ou une ligne de base de données) ;
 • Todoist : une nouvelle tâche ;
@@ -23,7 +23,7 @@ Pensé pour la montre : un gros bouton, des états clairs (prêt, enregistrement
 Sans connexion ? La note est gardée sur la montre (jusqu'à 5) et part toute seule au retour du téléphone.
 
 Réglages (appli Garmin Connect › Applis Connect IQ › Voxwrist Notes › Réglages) :
-• Clé API OpenAI (obligatoire, platform.openai.com ; environ 0,006 $ par minute d'audio chez OpenAI) ;
+• Une clé de transcription au choix : Groq (gratuite, console.groq.com), Google Gemini (gratuite, aistudio.google.com) ou OpenAI (platform.openai.com ; environ 0,006 $ par minute d'audio) ;
 • Destination : E-mail, Notion, Todoist ou Autre (lien) ;
 • Votre adresse e-mail, ou le jeton Notion + le lien de la page, ou le jeton Todoist ;
 • Langue, durée maximale.
@@ -34,7 +34,7 @@ Nécessite une montre Garmin avec micro (Connect IQ 6.0.3+) connectée à l'appl
 ### Description EN
 Dictate a note from your wrist in two presses: START, speak, START. It lands in your inbox.
 
-Voxwrist Notes records your voice with the watch microphone, has it transcribed by OpenAI using YOUR own API key, shows the text on the watch and sends it where you want:
+Voxwrist Notes records your voice with the watch microphone, has it transcribed using YOUR own API key (OpenAI, or a free Groq or Google Gemini key), shows the text on the watch and sends it where you want:
 • Email (default): just enter your address;
 • Notion: a new page (or database row);
 • Todoist: a new task;
@@ -43,13 +43,13 @@ Voxwrist Notes records your voice with the watch microphone, has it transcribed 
 Built for the wrist: one big button, clear states (ready, recording, sending, sent, error with cause and fix), English and French, no keyboard, no long press.
 Offline? The note is kept on the watch (up to 5) and sent automatically when the phone is back.
 
-Settings (Garmin Connect app › Connect IQ apps › Voxwrist Notes › Settings): OpenAI API key (required; about $0.006 per audio minute at OpenAI), destination, your email address or Notion token + page link or Todoist token, language, max duration.
+Settings (Garmin Connect app › Connect IQ apps › Voxwrist Notes › Settings): one transcription key: Groq (free, console.groq.com), Google Gemini (free, aistudio.google.com) or OpenAI (about $0.006 per audio minute), destination, your email address or Notion token + page link or Todoist token, language, max duration.
 
 Every email has an unsubscribe link. Audio, text and keys are never stored by the Voxwrist relay. No account, no ads, no trackers.
 Requires a Garmin watch with a microphone (Connect IQ 6.0.3+) paired with the Garmin Connect app.
 
 ### Notes pour le testeur (reviewer notes)
-EN: Needs the user's own OpenAI API key (Garmin Connect › app settings). Without a key the watch shows a setup screen. Default destination is Email: enter any address you own in "Your email address"; the note arrives from the Voxwrist sender with an unsubscribe link. Notion (integration token + page link) and Todoist (API token) are optional. Relay health: https://jular.tail4e27eb.ts.net:10000/v1/health
+EN: Needs one of the user's own API keys: OpenAI, Groq (free) or Google Gemini (free) (Garmin Connect › app settings). Without a key the watch shows a setup screen. Default destination is Email: enter any address you own in "Your email address"; the note arrives from the Voxwrist sender with an unsubscribe link. Notion (integration token + page link) and Todoist (API token) are optional. Relay health: https://jular.tail4e27eb.ts.net:10000/v1/health
 
 ---------------------------------------------------------------------------------------------------
 ## 2. Voxwrist Ask 2.0
@@ -69,7 +69,7 @@ Votre agent personnel, au poignet. Appuyez sur START, posez votre question, il v
 • Conversation : enchaînez (« et demain ? ») sans répéter le contexte.
 • 2 appuis maximum, aucun clavier, aucun appui long.
 
-Apportez votre clé : OpenAI (obligatoire, pour la voix) et, si vous préférez, Anthropic Claude pour les réponses. Vous payez directement votre fournisseur, quelques centimes par jour d'usage normal.
+Apportez votre clé, gratuite ou payante : Google Gemini (gratuite, aistudio.google.com : réponses, et voix si disponible), Groq (gratuite, console.groq.com : réponses à l'écran) ou OpenAI (la meilleure voix, quelques centimes par jour). Anthropic Claude peut répondre, avec une clé Gemini, Groq ou OpenAI pour comprendre la voix. Sans clé OpenAI ni Gemini, la réponse s'affiche sans être lue.
 Connecteurs facultatifs (réglages) : ville pour la météo, lien iCal privé de votre agenda (Google Agenda, iCloud, Outlook), boîte e-mail IMAP en lecture seule avec mot de passe d'application.
 Les rappels restent sur la montre. Ni l'audio, ni les textes, ni vos clés ne sont conservés par le relais Voxwrist. Pas de compte, pas de publicité.
 
@@ -82,9 +82,9 @@ Your personal agent, on your wrist. Press START, ask, and it answers out loud an
 • Conversation: follow up ("and tomorrow?") without repeating yourself.
 • 2 presses max, no keyboard, no long press.
 
-Bring your own key: OpenAI (required, for voice) and optionally Anthropic Claude for answers. You pay your provider directly, a few cents a day for normal use.
+Bring your own key, free or paid: Google Gemini (free, aistudio.google.com: answers, and voice when available), Groq (free, console.groq.com: on-screen answers) or OpenAI (best voice, a few cents a day). Anthropic Claude can answer, with a Gemini, Groq or OpenAI key to understand your voice. Without an OpenAI or Gemini key, answers are shown, not spoken.
 Optional connectors (settings): weather city, private iCal link of your calendar (Google Calendar, iCloud, Outlook), read-only IMAP mailbox with an app password.
 Reminders stay on the watch. Audio, texts and keys are never stored by the Voxwrist relay. No account, no ads.
 
 ### Notes pour le testeur (reviewer notes)
-EN: Needs the user's own OpenAI API key (Garmin Connect › app settings › "OpenAI API key"). Without it the watch shows a setup screen. Press START, speak, press START: the answer is shown and spoken through the watch speaker (on watches with a speaker). Swipe up/down (or UP/DOWN) for the "Today" brief and the reminders list. Calendar/mail connectors are optional.
+EN: Needs one of the user's own API keys: Google Gemini (free), Groq (free) or OpenAI (Garmin Connect › app settings). Without one the watch shows a setup screen (an Anthropic key alone is not enough: it cannot transcribe audio). Press START, speak, press START: the answer is shown, and spoken through the watch speaker with an OpenAI or Gemini key (on watches with a speaker). Swipe up/down (or UP/DOWN) for the "Today" brief and the reminders list. Calendar/mail connectors are optional.
