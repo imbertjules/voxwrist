@@ -60,35 +60,74 @@ EN: Needs one of the user's own API keys: OpenAI, Groq (free) or Google Gemini (
 - **Hero (1440×720)** : FR `assets-v2/voxwrist-ask-hero-1440x720-fr.jpg` · EN `assets-v2/voxwrist-ask-hero-1440x720-en.jpg`
 - **Galerie FR (5 JPG)** : `assets-v2/voxwrist-ask-screenshot-1-ask-voice-fr.jpg`, `-2-daily-brief-fr.jpg`, `-3-voice-reminders-fr.jpg`, `-4-follow-up-fr.jpg`, `-5-live-orb-fr.jpg`
 - **Galerie EN (5 JPG)** : `assets-v2/voxwrist-ask-screenshot-1-ask-voice-en.jpg`, `-2-daily-brief-en.jpg`, `-3-voice-reminders-en.jpg`, `-4-follow-up-en.jpg`, `-5-live-orb-en.jpg`
-- **Mots-clés** : assistant, ai, chatgpt, claude, voice assistant, agent, reminders, daily brief, assistant vocal, rappels
+- **Mots-clés** : assistant IA, AI assistant, voice assistant, assistant vocal, IA, AI, OpenAI, Gemini, Claude, Groq, email, e-mail, calendar, agenda, météo, weather, reminders, rappels, daily brief
+- **Accroche (1re ligne de la description)** : FR « Assistant IA vocal au poignet : posez vos questions, écoutez la réponse, retrouvez vos e-mails, votre agenda et la météo. » · EN “AI voice assistant on your wrist: ask anything, hear the answer, and check your emails, calendar and weather.” (le Store Connect IQ n'a pas de champ sous-titre : le titre reste « Voxwrist Ask »)
 
 ### Description FR
-Votre agent personnel, au poignet. Appuyez sur START, posez votre question, il vous répond à voix haute et à l'écran.
+Assistant IA vocal au poignet : posez vos questions, écoutez la réponse, retrouvez vos e-mails, votre agenda et la météo.
 
-• Un agent vivant : un orbe animé qui écoute, réfléchit et parle ; donnez-lui un nom et une couleur.
-• Brief du jour : météo, prochains rendez-vous de votre agenda, e-mails non lus, en un coup d'œil.
-• Rappels à la voix : « rappelle-moi à 18 h d'appeler Paul » ; la montre vous le rappelle à l'heure dite.
-• Conversation : enchaînez (« et demain ? ») sans répéter le contexte.
+Appuyez sur START, parlez, appuyez sur START : la réponse s'affiche à l'écran et elle est lue à voix haute (avec une clé OpenAI ou Gemini).
+
+CE QUE FAIT VOXWRIST ASK
+• Assistant vocal IA : posez n'importe quelle question à la voix, réponse à l'écran et à voix haute.
+• Brief du jour à l'ouverture : météo de votre ville, rendez-vous restants de la journée, nombre d'e-mails non lus avec les derniers expéditeurs et objets.
+• Rappels à la voix : « rappelle-moi à 18 h d'appeler Paul » ; la montre vous prévient à l'heure dite.
+• Questions de suivi : enchaînez (« et demain ? ») sans tout répéter.
+• Un orbe animé qui écoute, réfléchit et parle ; donnez-lui un nom et une couleur (Aurore, Lagon, Braise).
 • 2 appuis maximum, aucun clavier, aucun appui long.
 
-Apportez votre clé, gratuite ou payante : Google Gemini (gratuite, aistudio.google.com : réponses, et voix si disponible), Groq (gratuite, console.groq.com : réponses à l'écran) ou OpenAI (la meilleure voix, quelques centimes par jour). Anthropic Claude peut répondre, avec une clé Gemini, Groq ou OpenAI pour comprendre la voix. Sans clé OpenAI ni Gemini, la réponse s'affiche sans être lue.
-Connecteurs facultatifs (réglages) : ville pour la météo, lien iCal privé de votre agenda (Google Agenda, iCloud, Outlook), boîte e-mail IMAP en lecture seule avec mot de passe d'application.
-E-mail : fonctionne avec Gmail, iCloud, Yahoo, Orange et Free via un mot de passe d'application ; Outlook/Hotmail n'est pas pris en charge.
-Les rappels restent sur la montre. Ni l'audio, ni les textes, ni vos clés ne sont conservés par le relais Voxwrist. Pas de compte, pas de publicité.
+FONCTIONNE AVEC VOS E-MAILS, VOTRE AGENDA ET LA MÉTÉO
+Réglages facultatifs (appli Garmin Connect › Applis Connect IQ › Voxwrist Ask › Réglages) :
+• Météo : entrez votre ville (par exemple Paris).
+• Agenda : collez le lien iCal privé de votre agenda Google Agenda, iCloud ou Outlook.
+• E-mails : votre adresse et un mot de passe d'application (accès IMAP en lecture seule). Fonctionne avec Gmail, iCloud, Yahoo, Orange et Free. Les e-mails Outlook/Hotmail ne sont pas pris en charge.
+
+VOTRE CLÉ IA, GRATUITE OU PAYANTE
+• Google Gemini : gratuite (aistudio.google.com), réponses, et voix si disponible.
+• Groq : gratuite (console.groq.com), réponses à l'écran.
+• OpenAI : la meilleure voix, quelques centimes par jour.
+• Anthropic Claude : pour les réponses, avec une clé Gemini, Groq ou OpenAI pour comprendre la voix.
+Sans clé OpenAI ni Gemini, la réponse s'affiche sans être lue.
+
+CONFIDENTIALITÉ
+• Ni l'audio, ni les textes, ni vos clés ne sont conservés par le relais Voxwrist.
+• Boîte e-mail lue en lecture seule ; les rappels restent sur la montre.
+• Pas de compte, pas de publicité.
+
+Nécessite une montre Garmin avec micro, associée à l'appli Garmin Connect.
 
 ### Description EN
-Your personal agent, on your wrist. Press START, ask, and it answers out loud and on screen.
+AI voice assistant on your wrist: ask anything, hear the answer, and check your emails, calendar and weather.
 
-• A living agent: an animated orb that listens, thinks and speaks; give it a name and a colour.
-• Daily brief: weather, your next calendar events, unread emails, at a glance.
-• Voice reminders: "remind me at 6 pm to call Paul"; the watch reminds you on time.
-• Conversation: follow up ("and tomorrow?") without repeating yourself.
+Press START, speak, press START: the answer appears on screen and is read out loud (with an OpenAI or Gemini key).
+
+WHAT VOXWRIST ASK DOES
+• AI voice assistant: ask any question by voice, get the answer on screen and out loud.
+• Daily brief at launch: weather for your city, today's remaining calendar events, unread email count with the latest senders and subjects.
+• Voice reminders: "remind me at 6 pm to call Paul"; the watch alerts you on time.
+• Follow-up questions: keep going ("and tomorrow?") without repeating yourself.
+• An animated orb that listens, thinks and speaks; give it a name and a colour (Aurore, Lagon, Braise).
 • 2 presses max, no keyboard, no long press.
 
-Bring your own key, free or paid: Google Gemini (free, aistudio.google.com: answers, and voice when available), Groq (free, console.groq.com: on-screen answers) or OpenAI (best voice, a few cents a day). Anthropic Claude can answer, with a Gemini, Groq or OpenAI key to understand your voice. Without an OpenAI or Gemini key, answers are shown, not spoken.
-Optional connectors (settings): weather city, private iCal link of your calendar (Google Calendar, iCloud, Outlook), read-only IMAP mailbox with an app password.
-Mail: works with Gmail, iCloud, Yahoo, Orange and Free using an app password; Outlook/Hotmail is not supported.
-Reminders stay on the watch. Audio, texts and keys are never stored by the Voxwrist relay. No account, no ads.
+WORKS WITH YOUR EMAILS, CALENDAR AND WEATHER
+Optional settings (Garmin Connect app › Connect IQ apps › Voxwrist Ask › Settings):
+• Weather: enter your city (for example Paris).
+• Calendar: paste the private iCal link of your Google Calendar, iCloud or Outlook calendar.
+• Email: your address and an app password (read-only IMAP access). Works with Gmail, iCloud, Yahoo, Orange and Free. Outlook/Hotmail mail is not supported.
+
+YOUR AI KEY, FREE OR PAID
+• Google Gemini: free (aistudio.google.com), answers, and voice when available.
+• Groq: free (console.groq.com), on-screen answers.
+• OpenAI: best voice, a few cents a day.
+• Anthropic Claude: for answers, with a Gemini, Groq or OpenAI key to understand your voice.
+Without an OpenAI or Gemini key, answers are shown, not spoken.
+
+PRIVACY
+• Audio, texts and keys are never stored by the Voxwrist relay.
+• Mailbox is read-only; reminders stay on the watch.
+• No account, no ads.
+
+Requires a Garmin watch with a microphone, paired with the Garmin Connect app.
 
 ### Notes pour le testeur (reviewer notes)
 EN: Needs one of the user's own API keys: Google Gemini (free), Groq (free) or OpenAI (Garmin Connect › app settings). Without one the watch shows a setup screen (an Anthropic key alone is not enough: it cannot transcribe audio). Press START, speak, press START: the answer is shown, and spoken through the watch speaker with an OpenAI or Gemini key (on watches with a speaker). Swipe up/down (or UP/DOWN) for the "Today" brief and the reminders list. Calendar/mail connectors are optional.

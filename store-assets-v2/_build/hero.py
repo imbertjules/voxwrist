@@ -3,8 +3,8 @@ from watch2 import watch2
 import sys
 SRC='/workspace/voxstore/src/voxwrist-site/store-screenshots/'
 HW,HH=1440,720
-TXT={'en':('Your AI agent,','on your wrist.','Ask by voice  ·  Daily brief  ·  Voice reminders'),
-     'fr':('Votre agent IA,','à votre poignet.','Questions vocales  ·  Brief du jour  ·  Rappels')}
+TXT={'en':('Your AI assistant,','on your wrist.','Ask by voice  ·  Daily brief  ·  Voice reminders'),
+     'fr':('Votre assistant IA,','à votre poignet.','Questions vocales  ·  Brief du jour  ·  Rappels')}
 def wordmark(img,x,y,size=46,mark=True):
     d=ImageDraw.Draw(img)
     if mark:
