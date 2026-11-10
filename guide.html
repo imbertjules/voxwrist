@@ -1,0 +1,77 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voxwrist Ask — guide (rappels, volume, réglages)</title>
+<meta name="description" content="Comment marchent les rappels, le volume et les réglages de Voxwrist Ask sur Garmin.">
+<link rel="stylesheet" href="style.css"></head><body><main>
+<p><a href="index.html">← Voxwrist</a> · <a class="lang" href="#en">English ↓</a></p>
+
+<section class="hero"><h1>Guide Voxwrist Ask</h1>
+<p class="dim">Réponses courtes aux questions les plus fréquentes (volume, rappels, clés, endpoint local).</p></section>
+
+<h2>Volume de la réponse</h2>
+<ul class="steps">
+<li>Par défaut le volume est au maximum (le haut-parleur des fēnix est petit).</li>
+<li>Pendant que l'assistant parle : <strong>UP / DOWN</strong> sur la montre (Doux ↔ Normal ↔ Fort).</li>
+<li>Ou Garmin Connect › Applis Connect IQ › Voxwrist Ask › Réglages › <strong>Volume de la réponse</strong>.</li>
+</ul>
+
+<h2>Rappels à la voix</h2>
+<ul class="steps">
+<li>Dites par exemple : « rappelle-moi à 18 h d'appeler Paul ».</li>
+<li>Réglage <strong>Rappels vocaux</strong> :
+  <ul>
+    <li><strong>Sur la montre seulement</strong> (défaut) — vibration à l'heure dite.</li>
+    <li><strong>Montre + e-mail calendrier (.ics)</strong> — garde le rappel local et envoie une invitation .ics à l'adresse mail des réglages (Gmail / Apple Mail l'ajoutent à l'agenda).</li>
+    <li><strong>E-mail calendrier seulement (.ics)</strong> — pas de rappel sur la montre si l'e-mail part ; sinon repli sur la montre.</li>
+  </ul>
+</li>
+<li>Pour l'e-mail calendrier : renseignez <strong>Votre adresse mail</strong> (et le code d'accès si vous utilisez aussi le brief mail). Le relais doit avoir l'envoi d'e-mail activé.</li>
+<li>Le lien iCal du brief reste <strong>lecture seule</strong> (pas d'écriture directe Google Agenda OAuth pour l'instant).</li>
+<li><strong>Rappels courts</strong> (&lt; ~5 min) : gardez l'app ouverte (limite Garmin en fond).</li>
+<li>Maximum 8 rappels sur la montre.</li>
+</ul>
+
+<h2>Clés IA</h2>
+<ul class="steps">
+<li>Au moins une clé qui comprend la voix : <a href="https://aistudio.google.com/apikey">Gemini</a>, <a href="https://console.groq.com/keys">Groq</a> ou <a href="https://platform.openai.com/api-keys">OpenAI</a>.</li>
+<li>Pour entendre la réponse : OpenAI ou Gemini.</li>
+</ul>
+
+<h2>URL compatible OpenAI (local / privé)</h2>
+<ul class="steps">
+<li>Réglage avancé : <strong>URL compatible OpenAI</strong>, ex. <code>http://192.168.1.10:11434/v1</code> (Ollama) ou votre LiteLLM / LocalAI.</li>
+<li>Remplissez aussi le champ clé OpenAI (toute clé <code>sk-…</code> acceptée par votre serveur).</li>
+<li>Le relais cloud (Vercel) ne peut joindre une IP privée chez vous : pour du 100 % local, pointez aussi le <strong>relais</strong> vers une instance sur votre réseau, ou exposez votre endpoint via un tunnel HTTPS.</li>
+</ul>
+
+<h2>Brief du jour</h2>
+<ul class="steps">
+<li>Météo : ville · Agenda : lien iCal privé (lecture) · Mails : adresse + code d'accès IMAP.</li>
+</ul>
+
+<p><a href="privacy.html">Confidentialité</a> · Contact : <a href="mailto:imbertjules@gmail.com">imbertjules@gmail.com</a></p>
+
+<hr id="en">
+<h2>English</h2>
+<p class="dim">Short answers (volume, reminders, keys, local endpoint).</p>
+
+<h3>Answer volume</h3>
+<ul class="steps">
+<li>Default is maximum. <strong>UP / DOWN</strong> while speaking cycles Soft / Normal / Loud. Or set it in Connect IQ settings.</li>
+</ul>
+
+<h3>Voice reminders</h3>
+<ul class="steps">
+<li>Setting <strong>Voice reminders</strong>: watch only · watch + calendar email (.ics) · calendar email only.</li>
+<li>Calendar email uses your mail address from settings; the relay must be able to send mail. Brief iCal stays read-only.</li>
+<li>Short reminders (&lt; ~5 min): keep the app open.</li>
+</ul>
+
+<h3>OpenAI-compatible URL</h3>
+<ul class="steps">
+<li>Advanced setting for Ollama / LiteLLM / LocalAI (e.g. <code>http://192.168.1.10:11434/v1</code>) plus an OpenAI key field your server accepts.</li>
+<li>Cloud relay cannot reach your LAN: self-host the relay or use a public HTTPS tunnel to your endpoint.</li>
+</ul>
+
+<p><a href="privacy.html">Privacy</a> · Contact: <a href="mailto:imbertjules@gmail.com">imbertjules@gmail.com</a></p>
+<footer>Voxwrist n'est affilié ni à Garmin, ni à OpenAI, ni à Anthropic.</footer>
+</main></body></html>
