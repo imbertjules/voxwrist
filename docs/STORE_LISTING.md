@@ -54,6 +54,8 @@ EN: Needs one of the user's own API keys: OpenAI, Groq (free) or Google Gemini (
 ---------------------------------------------------------------------------------------------------
 ## 2. Voxwrist Ask 2.0.1
 
+> **État des textes** : les descriptions FR et EN ci-dessous sont à jour pour les rappels de la 2.0.6 (trois destinations, adresse des rappels, limite des 5 minutes, échec d'e-mail). Le fichier `.iq` et l'UUID restent ceux de la version publiée : la prochaine mise à jour est à construire et à tester avant dépôt.
+
 - **Nom** : Voxwrist Ask · **Type** : Watch App · **Catégorie** : Outils / Productivité · **Prix** : gratuit
 - **Fichier** : `~/garmin-store/voxwrist-ask/dist/voxwrist-ask-2.0.1.iq` (version 2.0.1, UUID `fd13665c-b9c3-4a38-a44d-6a8ffbf46dcf`, 26 appareils avec micro — export 26/26, 23 modèles du manifeste dont certains en plusieurs variantes ; mise à jour de la 2.0.0)
 - **Icône (couverture 500×500)** : `assets-v2/voxwrist-ask-cover-500.png`
@@ -71,7 +73,7 @@ Appuyez sur START, parlez, appuyez sur START : la réponse s'affiche à l'écran
 CE QUE FAIT VOXWRIST ASK
 • Assistant vocal IA : posez n'importe quelle question à la voix, réponse à l'écran et à voix haute.
 • Brief du jour à l'ouverture : météo de votre ville, rendez-vous restants de la journée, nombre d'e-mails non lus avec les derniers expéditeurs et objets.
-• Rappels à la voix : « rappelle-moi à 18 h d'appeler Paul » ; la montre vous prévient à l'heure dite.
+• Rappels à la voix : « rappelle-moi à 18 h d'appeler Paul ». Trois destinations au choix : sur la montre seulement, montre + e-mail calendrier (.ics), ou e-mail calendrier seulement. L'adresse des rappels se règle dans Garmin Connect (par défaut, celle des notes). Déplacement et annulation à la voix, même en mode e-mail ; si l'e-mail ne peut pas partir, le rappel reste sur la montre. Un rappel très proche peut sonner jusqu'à 5 minutes plus tard : c'est la limite que Garmin impose aux applis en arrière-plan.
 • Questions de suivi : enchaînez (« et demain ? ») sans tout répéter.
 • Un orbe animé qui écoute, réfléchit et parle ; donnez-lui un nom et une couleur (Aurore, Lagon, Braise).
 • 2 appuis maximum, aucun clavier, aucun appui long.
@@ -91,7 +93,7 @@ Sans clé OpenAI ni Gemini, la réponse s'affiche sans être lue.
 
 CONFIDENTIALITÉ
 • Ni l'audio, ni les textes, ni vos clés ne sont conservés par le relais Voxwrist.
-• Boîte e-mail lue en lecture seule ; les rappels restent sur la montre.
+• Boîte e-mail lue en lecture seule. Rappels : si vous choisissez l'une des deux destinations e-mail, seuls le texte et l'heure du rappel passent par le relais et par notre service d'envoi ; rien n'est ajouté à votre agenda sans que vous ouvriez le fichier et confirmiez.
 • Pas de compte, pas de publicité.
 
 Nécessite une montre Garmin avec micro, associée à l'appli Garmin Connect.
@@ -104,7 +106,7 @@ Press START, speak, press START: the answer appears on screen and is read out lo
 WHAT VOXWRIST ASK DOES
 • AI voice assistant: ask any question by voice, get the answer on screen and out loud.
 • Daily brief at launch: weather for your city, today's remaining calendar events, unread email count with the latest senders and subjects.
-• Voice reminders: "remind me at 6 pm to call Paul"; the watch alerts you on time.
+• Voice reminders: "remind me at 6 pm to call Paul". Three destinations: watch only, watch + calendar email (.ics), or calendar email only. The reminder email address is set in Garmin Connect (the notes address by default). Move or cancel by voice, including in email mode; if the email cannot be sent, the reminder stays on the watch. A reminder due very soon may ring up to 5 minutes late: that is Garmin's limit for background apps.
 • Follow-up questions: keep going ("and tomorrow?") without repeating yourself.
 • An animated orb that listens, thinks and speaks; give it a name and a colour (Aurore, Lagon, Braise).
 • 2 presses max, no keyboard, no long press.
@@ -124,7 +126,7 @@ Without an OpenAI or Gemini key, answers are shown, not spoken.
 
 PRIVACY
 • Audio, texts and keys are never stored by the Voxwrist relay.
-• Mailbox is read-only; reminders stay on the watch.
+• Mailbox is read-only. Reminders: if you pick either email destination, only the reminder text and time go through the relay and our sending service; nothing is added to your calendar unless you open the file and confirm.
 • No account, no ads.
 
 Requires a Garmin watch with a microphone, paired with the Garmin Connect app.
