@@ -113,7 +113,15 @@ for lab, part in (('FR', fr), ('EN', en)):
        'uniquement sur la montre' not in part if lab == 'FR'
        else 'on the watch only' not in part)
 
-ck('sections FR = sections EN', fr.count('<section') == en.count('<section') == 7)
+ck('sections FR = sections EN', fr.count('<section') == en.count('<section') == 8)
+ck('le guide donne le volume de la réponse (FR)', 'Volume de la réponse' in fr and 'UP' in fr)
+ck('le guide donne le volume de la réponse (EN)', 'Answer volume' in en and 'UP' in en)
+ck('le guide liste les clés d\'IA (FR)', 'Clés d\'IA' in fr and 'Groq' in fr)
+ck('le guide liste les clés d\'IA (EN)', 'AI keys' in en and 'Groq' in en)
+ck('le guide décrit l\'URL compatible OpenAI (FR)', 'URL compatible OpenAI' in fr and '11434' in fr)
+ck('le guide décrit l\'URL compatible OpenAI (EN)', 'OpenAI-compatible URL' in en and '11434' in en)
+ck('le guide ne nomme pas Vercel', 'vercel' not in g.lower())
+ck('le guide ne dit pas « relais cloud »', 'relais cloud' not in g.lower())
 ck('le guide ne dit jamais « agent »', 'agent' not in g.lower())
 ck('le guide ne contient aucun mailto', 'mailto:' not in g)
 ck('le guide ne contient aucun e-mail', not re.search(r'[\w.+-]+@[\w-]+\.[a-z]{2,}', g))
