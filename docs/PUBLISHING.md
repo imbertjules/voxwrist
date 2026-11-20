@@ -37,6 +37,17 @@ Sans cette étape, Notes affiche « e-mail pas encore actif » quand la destinat
 - **Ask** : *Upload an app* › `voxwrist-ask-2.0.0-free.iq`, gratuit, catégorie Outils/Productivité, textes de la section 2, icône `assets/icon-ask-500.png`, captures `store-screenshots/ask-*.png`, même URL de confidentialité.
 - Notes pour le testeur : textes EN des sections. Le testeur a besoin d'une clé OpenAI ; tu peux créer une clé dédiée plafonnée à 1 $ (platform.openai.com › Limits), la donner dans les notes puis la révoquer après la revue.
 
-## 4. Le relais (en ligne sur le NAS)
-- `https://jular.tail4e27eb.ts.net:10000` (Tailscale Funnel → conteneur `voxwrist-relay` 2.1.0), adresse par défaut des deux apps.
-- Mise à jour, retour arrière : `voxwrist-relay/deploy/NAS.md`. Le NAS doit rester allumé et Tailscale connecté.
+## 4. Le relais (en ligne sur o2switch)
+- `https://voxwrist.convertisseur-heures-paie.fr` — o2switch, application Python Passenger, code de `main`
+  (2.5.11), e-mail actif. C'est l'**adresse par défaut des deux apps** à partir de Voxwrist Ask **2.0.8**.
+  Vérification : `GET /v1/health` → `"ok":true`, `"email":true`, `"ask":true`.
+- **Retirés** : `https://voxwrist.vercel.app` (Vercel, 2.5.5) et `https://jular.tail4e27eb.ts.net:10000`
+  (NAS, 2.1.0). Ils ne servent plus le produit : ils répondent seulement
+  `400 {"error":"relay_moved","msg":"Serveur changé : mettez l app à jour / Server moved: update the app in Connect IQ"}`,
+  que les montres déjà installées affichent. Extinction définitive après 30 jours sans appel.
+- Mise à jour, retour arrière : `voxwrist-relay/deploy/NAS.md` (historique) et `voxwrist-relay/README.md`
+  § « Relais public (production) ».
+- Le compteur anonyme de montres actives (`/v1/stats`, en-tête `X-Vox-Admin`) n'est pas encore exposé par le
+  relais hébergé : la page de confidentialité mentionne encore Vercel tant que la réponse de transition est
+  servie par Vercel (30 jours au plus).
+
